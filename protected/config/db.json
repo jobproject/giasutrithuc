@@ -1,6 +1,6 @@
 {
-    "database": "jobmarket",
+    "database": "giasu",
     "host"    : "localhost",
-    "user"    : "jobmarket",
+    "user"    : "giasu",
     "password": "secret"
 }

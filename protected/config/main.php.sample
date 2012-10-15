@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: text/html; charset=utf-8');
 $pre_config = CMap::mergeArray(
        require(dirname(__FILE__).'/modules.php'),
        require(dirname(__FILE__).'/local.php')

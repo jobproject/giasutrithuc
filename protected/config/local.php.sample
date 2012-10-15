@@ -3,10 +3,10 @@
 return array(
    'components'=>array(
         'db'=>array(
-            'connectionString' => "pgsql:dbname=DB_NAME_HERE;host=DB_HOST_HERE",
+            'connectionString' => "mysql:dbname=giasu;host=localhost",
             // 'emulatePrepare' => true,
-            'username' => 'DB_USER_HERE',
-            'password' => 'DB_PASSWOD_HERE',
+            'username' => 'giasu',
+            'password' => 'secret',
             'charset' => 'utf8',
             // turn on schema caching to improve performance
             // 'schemaCachingDuration'=>3600,
@@ -14,24 +14,22 @@ return array(
     ),
 
     'params'=>array(
-        'home_url' => 'http://gigadb.cogini.com', // Where top level link goes to
-
-        'timezone'=>"Asia/Taipei",
+       'home_url' => 'localhost', // Where top level link goes to
 
         // Used in the contact page
-        'adminEmail'=>'support@cogini.com',
+        'adminEmail'=>'support@vagrant.local',
 
         // This is used as the sender of emails
-        'app_email_name' => 'Giga DB',
-        'app_email' => 'support@cogini.com',
-        'email_prefix' => '[Giga DB] ',
+        'app_email_name' => 'giasu',
+        'app_email' => 'support@vagrant.local',
+        'email_prefix' => '[giasu]',
 
-        'support_email' => 'support@cogini.com',
+        'support_email' => 'support@vagrant.local',
         'email_prefix' => '', // put at the begining of the subject line
-        'contact_email' => 'support@cogini.com', // this is used in the contact page
+        'contact_email' => 'support@vagrant.local', // this is used in the contact page
 
         // Notified when a new user signs up
-        'notify_email' => 'support@cogini.com',
+        'notify_email' => 'support@vagrant.local',
 
         // Cogini
         'recaptcha_publickey' => '6LdkzgsAAAAAAGFJ5GdJyXf4JvFqKJe5N0-F3IRt',
