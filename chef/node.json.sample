@@ -1,0 +1,16 @@
+{
+    "yii": {
+        "path": "/var/www/hosts/publish.cogini.com/yii"
+    },
+    "publish": {
+        "root_dir": "/var/www/hosts/publish.cogini.com/htdocs",
+        "log_dir": "/var/www/hosts/publish.cogini.com/logs",
+        "db": {
+            "user": "publish",
+            "password": "FILL_IN_HERE"
+        }
+    },
+    "run_list": [
+        "recipe[main]"
+    ]
+}

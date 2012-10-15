@@ -1,0 +1,6 @@
+{
+    "database": "jobmarket",
+    "host"    : "localhost",
+    "user"    : "jobmarket",
+    "password": "secret"
+}

@@ -1,0 +1,26 @@
+<VirtualHost *:80>
+
+    DocumentRoot <%= node[:giasu][:root_dir] %>
+    ErrorLog     <%= node[:giasu][:log_dir] %>/error.log
+    CustomLog    <%= node[:giasu][:log_dir] %>/access.log combined
+
+    <Directory <%= node[:giasu][:root_dir] %>>
+        Options FollowSymLinks
+        Order allow,deny
+        allow from all
+
+        RewriteEngine on
+        RewriteBase /
+
+        # If a directory or a file exists, use it directly
+        RewriteCond %{REQUEST_FILENAME} -s [OR]
+        RewriteCond %{REQUEST_FILENAME} -l [OR]
+        RewriteCond %{REQUEST_FILENAME} -d
+
+        RewriteRule ^.*$ - [NC,L]
+
+        # otherwise forward it to index.php
+        RewriteRule ^.*$ index.php [NC,L]
+    </Directory>
+
+</VirtualHost>

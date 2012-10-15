@@ -1,0 +1,7 @@
+<% db_config = node[:giasu][:db] -%>
+{
+    "database": "giasu",
+    "host"    : "localhost",
+    "user"    : "<%= db_config[:user] %>",
+    "password": "<%= db_config[:password] %>"
+}
