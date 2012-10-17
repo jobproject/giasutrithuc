@@ -4,6 +4,8 @@ class SiteController extends Controller {
     /**
  	 * Declares class-based actions.
 	 */
+    public $layout = '//layouts/column3';
+
 	public function actions() {
 		return array(
 			# captcha action renders the CAPTCHA image displayed on the contact page
@@ -32,7 +34,7 @@ class SiteController extends Controller {
         #    } else {
         #        $this->redirect(array('user/accountBalance', 'id'=>Yii::app()->user->_id));
         #    }
-	    #} 
+	    #}
         $this->render('index');
 	}
 
@@ -64,7 +66,7 @@ class SiteController extends Controller {
 			if ($model->validate()) {
 				$headers = "From: {$model->email}\r\nReply-To: {$model->email}";
 				mail(Yii::app()->params['adminEmail'],$model->subject,$model->body,$headers);
-                Yii::app()->user->setFlash('contact', 
+                Yii::app()->user->setFlash('contact',
                     'Thank you for contacting us. We will respond to you as soon as possible.');
 				$this->refresh();
 			}
